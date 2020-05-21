@@ -14,15 +14,6 @@ const game = () => {
     });
   };
 
-  // //reset game
-  // const resetGame = () => {
-  //   const resetBtn = document.querySelector("reset button");
-
-  //   resetBtn.addEventListener('click', () => {
-  //     match.classList.add("fadeOut");
-  //     introScreen.classList.add("fadeIn");
-  //   });
-  // };
   //Play Match
   const playMatch = () => {
     const options = document.querySelectorAll(".options button");
@@ -117,14 +108,12 @@ const game = () => {
       }
     }
   };
-  
-  //reset game
-  const resetGame = () => {
-    const resetBtn = document.querySelector("reset button");
 
-    resetBtn.addEventListener('click', () => {
-      match.classList.add("fadeOut");
-      introScreen.classList.add("fadeIn");
+  const resetGame = () => {
+    const resetBtn = document.querySelector(".reset button");
+    
+    resetBtn.addEventListener("click", () => {
+     location.reload();
     });
   };
 
