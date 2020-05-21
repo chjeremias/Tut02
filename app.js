@@ -13,6 +13,16 @@ const game = () => {
       match.classList.add("fadeIn");
     });
   };
+
+  // //reset game
+  // const resetGame = () => {
+  //   const resetBtn = document.querySelector("reset button");
+
+  //   resetBtn.addEventListener('click', () => {
+  //     match.classList.add("fadeOut");
+  //     introScreen.classList.add("fadeIn");
+  //   });
+  // };
   //Play Match
   const playMatch = () => {
     const options = document.querySelectorAll(".options button");
@@ -25,11 +35,12 @@ const game = () => {
         this.style.animation = "";
       });
     });
+    
     //Computer Options
     const computerOptions = ["rock", "paper", "scissors"];
 
     options.forEach(option => {
-      option.addEventListener("click", function() {
+       option.addEventListener("click", function() {
         //Computer Choice
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
@@ -106,10 +117,21 @@ const game = () => {
       }
     }
   };
+  
+  //reset game
+  const resetGame = () => {
+    const resetBtn = document.querySelector("reset button");
+
+    resetBtn.addEventListener('click', () => {
+      match.classList.add("fadeOut");
+      introScreen.classList.add("fadeIn");
+    });
+  };
 
   //Is call all the inner function
   startGame();
   playMatch();
+  resetGame();
 };
 
 //start the game function

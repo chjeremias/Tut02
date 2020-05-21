@@ -17,9 +17,11 @@ section {
   justify-content: space-around;
   align-items: center;
 }
+
 .score h2 {
   font-size: 30px;
 }
+
 .score p {
   text-align: center;
   padding: 10px;
@@ -39,8 +41,10 @@ section {
 .intro h1 {
   font-size: 50px;
 }
+
 .intro button,
-.match button {
+.match button 
+{
   width: 150px;
   height: 50px;
   background: none;
@@ -59,6 +63,7 @@ section {
   transform: translate(-50%, -50%);
   transition: opacity 0.5s ease 0.5s;
 }
+
 .winner {
   color: rgb(224, 224, 224);
   text-align: center;
@@ -66,10 +71,15 @@ section {
 }
 
 .hands,
-.options {
+.options,
+.reset {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.reset {
+  padding: 40px;
 }
 
 .player-hand {
